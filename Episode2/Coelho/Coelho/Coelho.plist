@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>The best thing about a boolean is even if you are wrong, you are only off by a bit.</string>
+	<string>Without requirements or design, programming is the art of adding bugs to an empty text file.</string>
+	<string>To err is humor.</string>
+	<string>Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.</string>
+	<string>Before software can be reusable it first has to be usable. </string>
+	<string>There is no proverb that is not true.
+		-- Cervantes</string>
+	<string>The best method for accelerating a computer is the one that boosts it by 9.8 m/s2.</string>
+	<string>I think Microsoft named .Net so it wouldn’t show up in a Unix directory listing.</string>
+	<string>If builders built buildings the way programmers wrote programs, then the first woodpecker that came along wound destroy civilization.</string>
+	<string>There are two ways to write error-free programs; only the third one works.</string>
+	<string>Programming is an unnatural act.</string>
+	<string>Ready, fire, aim: the fast approach to software development. Ready, aim, aim, aim, aim: the slow approach to software development.</string>
+	<string>It’s not a bug – it’s an undocumented feature.</string>
+	<string>One man’s crappy software is another man’s full time job. </string>
+	<string>A good programmer is someone who always looks both ways before crossing a one-way street. </string>
+	<string>Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</string>
+	<string>Programming is like sex. One mistake and you have to support it for the rest of your life.</string>
+	<string>Deleted code is debugged code.</string>
+	<string>Walking on water and developing software from a specification are easy if both are frozen. </string>
+	<string>If debugging is the process of removing software bugs, then programming must be the process of putting them in. </string>
+	<string>Software undergoes beta testing shortly before it’s released. Beta is Latin for “still doesn’t work. </string>
+	<string>Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.</string>
+	<string>It’s a curious thing about our industry: not only do we not learn from our mistakes, we also don’t learn from our successes.</string>
+	<string>There are only two kinds of programming languages: those people always bitch about and those nobody uses.</string>
+	<string>The cheapest, fastest, and most reliable components are those that aren’t there.</string>
+	<string>The best performance improvement is the transition from the nonworking state to the working state. </string>
+	<string>The trouble with programmers is that you can never tell what a programmer is doing until it’s too late.</string>
+</array>
+</plist>
