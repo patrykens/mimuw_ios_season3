@@ -17,4 +17,20 @@ struct Model {
 
 		people = arrayFromFile as! [[String : String]]
 	}
+
+	func peopleCount() -> Int {
+		return people.count
+	}
+
+	func avatarAtIndex(index: Int) -> String? {
+		return people[index]["avatar"]
+	}
+
+	func nameAtIndex(index: Int) -> String? {
+		return people[index]["name"]
+	}
+
+	func descriptionAtIndex(index: Int) -> String? {
+		return people[index]["description"]
+	}
 }
