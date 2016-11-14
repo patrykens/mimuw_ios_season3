@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>avatar</key>
+		<string>avatar1</string>
+		<key>name</key>
+		<string>Steve Jobs</string>
+		<key>description</key>
+		<string>Cupcake wafer I love I love I love cookie. I love macaroon topping. Caramels fruitcake dessert. Cheesecake macaroon jelly.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar2</string>
+		<key>name</key>
+		<string>Bill Gates</string>
+		<key>description</key>
+		<string>Cupcake danish cupcake toffee cotton candy gummi bears. Jelly candy canes cupcake donut apple pie topping danish macaroon. Lemon drops pastry jujubes wafer I love cookie I love cake. Croissant candy pudding oat cake jelly beans croissant.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar3</string>
+		<key>name</key>
+		<string>Donald Trump</string>
+		<key>description</key>
+		<string>Muffin danish chocolate bar sesame snaps candy danish topping. Chocolate bar candy I love lemon drops jujubes dragée cheesecake tart ice cream. Apple pie jelly beans sweet topping cookie jelly beans croissant tiramisu sugar plum.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar4</string>
+		<key>name</key>
+		<string>Pope John Paul II</string>
+		<key>description</key>
+		<string>Sugar plum wafer macaroon jelly-o chocolate bar gummies I love sugar plum gummi bears. Chocolate cake soufflé sesame snaps I love cookie chupa chups marshmallow topping. Dessert I love lemon drops brownie cookie bonbon. Brownie apple pie tootsie roll fruitcake sugar plum sesame snaps wafer.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar5</string>
+		<key>name</key>
+		<string>Road Runner</string>
+		<key>description</key>
+		<string>Powder apple pie I love jelly beans candy candy canes I love wafer. Powder cake jelly-o chupa chups biscuit. Danish soufflé chocolate I love I love cupcake biscuit.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar1</string>
+		<key>name</key>
+		<string>Mama</string>
+		<key>description</key>
+		<string>Spicy jalapeno bacon ipsum dolor amet ad commodo ut deserunt turkey. Ut chicken pork loin tongue commodo. Aliqua ea pork belly elit tenderloin burgdoggen, dolor irure flank venison ball tip jowl sed. Est pancetta turducken, pork chicken ground round shankle aute non velit. Turkey in exercitation cupim, chicken chuck veniam qui. Pork chop ham magna, cow picanha turducken chicken aliqua reprehenderit aute labore salami. Et ut pork belly, ham hock rump nostrud biltong.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar2</string>
+		<key>name</key>
+		<string>Elon Musk</string>
+		<key>description</key>
+		<string>Commodo dolore meatloaf, chicken turkey swine adipisicing corned beef shankle lorem. Ut jowl tempor shoulder culpa. Shank pork jerky spare ribs bresaola kevin incididunt pariatur pastrami qui velit beef drumstick hamburger. Turducken eu deserunt sirloin spare ribs enim nulla beef flank labore capicola.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar3</string>
+		<key>name</key>
+		<string>Lady Gaga</string>
+		<key>description</key>
+		<string>Aliquip prosciutto ipsum reprehenderit enim non exercitation andouille tenderloin chuck corned beef. Aute enim turkey, frankfurter salami cillum in laborum meatball capicola incididunt hamburger.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar4</string>
+		<key>name</key>
+		<string>Dalai Lama</string>
+		<key>description</key>
+		<string>Turkey pancetta incididunt, nisi anim dolore prosciutto chicken cow commodo leberkas mollit.</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>avatar5</string>
+		<key>name</key>
+		<string>Your dog</string>
+		<key>description</key>
+		<string>Aliquip bresaola ball tip bacon.</string>
+	</dict>
+</array>
+</plist>
