@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Fix functions
 // If enough time ...
 // Implement delegation pattern to inform ViewControllers about model change
 
@@ -15,18 +16,18 @@ class MessageModel {
 	private var messages: [(Int, String)] = []
 	
 	func numberOfMessages() -> Int {
-		return messages.count
+		return 0
 	}
 	
 	func messageAtIndex(index: Int) -> String {
-		return messages[index].1
+		return "nope"
 	}
 	
 	func senderForMessageAtIndex(index: Int) -> Int {
-		return messages[index].0
+		return 0
 	}
 	
 	func addNewMessage(message: String, sender: Int) {
-		messages.append((sender, message))
+		// append
 	}
 }
