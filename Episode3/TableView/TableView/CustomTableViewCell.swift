@@ -46,15 +46,26 @@ class CustomTableViewCell: UITableViewCell {
 		                                     multiplier: 0.0,
 		                                     constant: 50.0)
 
-		let avatarLeft = NSLayoutConstraint(item: avatar,
-		                                    attribute: .Left,
-		                                    relatedBy: .Equal,
-		                                    toItem: contentView,
-		                                    attribute: .Left,
-		                                    multiplier: 1.0,
-		                                    constant: 20.0)
+		contentView.addConstraints([avatarWidth, avatarRatio])
 
-		contentView.addConstraints([avatarWidth, avatarRatio, avatarLeft])
+		let views: [String: AnyObject] = ["avatar": avatar, "name": nameLabel, "desc": descriptionLabel]
+
+		let con1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[avatar]-20-[name]-20-|",
+		                                                          options: [.AlignAllCenterY],
+		                                                          metrics: nil,
+		                                                          views: views)
+		let con2 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-20-[avatar]-20-[desc]-20-|",
+		                                                          options: [],
+		                                                          metrics: nil,
+		                                                          views: views)
+		let con3 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[desc]-20-|",
+		                                                          options: [],
+		                                                          metrics: nil,
+		                                                          views: views)
+
+		contentView.addConstraints(con1)
+		contentView.addConstraints(con2)
+		contentView.addConstraints(con3)
 	}
 
 	required init?(coder aDecoder: NSCoder) {
