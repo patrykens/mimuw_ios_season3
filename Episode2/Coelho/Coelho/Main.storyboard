@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bAU-u5-NuY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="k55-TB-ZCr">
+            <objects>
+                <viewController id="bAU-u5-NuY" customClass="ViewController" customModule="Coelho" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Voa-ty-NZs"/>
+                        <viewControllerLayoutGuide type="bottom" id="sNY-W3-jLB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hfH-WM-mtp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-y3-W7O">
+                                <rect key="frame" x="266" y="550" width="68" height="30"/>
+                                <state key="normal" title="Show me!"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOv-3x-7qH">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OhW-y3-W7O" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nOv-3x-7qH" secondAttribute="bottom" constant="20" id="G4Z-fX-6qD"/>
+                            <constraint firstItem="nOv-3x-7qH" firstAttribute="centerX" secondItem="hfH-WM-mtp" secondAttribute="centerX" id="HJS-A9-3fd"/>
+                            <constraint firstItem="nOv-3x-7qH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Voa-ty-NZs" secondAttribute="bottom" constant="20" id="Kdt-Ki-c6F"/>
+                            <constraint firstItem="nOv-3x-7qH" firstAttribute="centerY" secondItem="hfH-WM-mtp" secondAttribute="centerY" id="QAU-Dg-9zy"/>
+                            <constraint firstItem="OhW-y3-W7O" firstAttribute="centerX" secondItem="hfH-WM-mtp" secondAttribute="centerX" id="TRd-S5-HN3"/>
+                            <constraint firstItem="sNY-W3-jLB" firstAttribute="top" secondItem="OhW-y3-W7O" secondAttribute="bottom" constant="20" id="dHG-CN-GFC"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="nOv-3x-7qH" secondAttribute="trailing" constant="20" id="gRX-Kd-61N"/>
+                            <constraint firstItem="nOv-3x-7qH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hfH-WM-mtp" secondAttribute="leadingMargin" constant="20" id="zbO-Jm-3mh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quoteButton" destination="OhW-y3-W7O" id="Eni-NG-nsq"/>
+                        <outlet property="quoteLabel" destination="nOv-3x-7qH" id="AU6-wi-ZbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiC-kU-4Qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="582"/>
+        </scene>
+    </scenes>
+</document>
