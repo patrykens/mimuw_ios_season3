@@ -338,6 +338,7 @@
 				D71DAB281DD9C2AA00CA9650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

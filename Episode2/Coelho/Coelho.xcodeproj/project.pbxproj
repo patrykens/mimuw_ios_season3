@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		D72C94061DBE0AF700D6962A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C94051DBE0AF700D6962A /* AppDelegate.swift */; };
 		D72C94081DBE0AF700D6962A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C94071DBE0AF700D6962A /* ViewController.swift */; };
-		D72C940B1DBE0AF700D6962A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C94091DBE0AF700D6962A /* Main.storyboard */; };
 		D72C940D1DBE0AF700D6962A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C940C1DBE0AF700D6962A /* Assets.xcassets */; };
 		D72C94101DBE0AF700D6962A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C940E1DBE0AF700D6962A /* LaunchScreen.storyboard */; };
 		D72C94181DBE0DE600D6962A /* Coelho.plist in Resources */ = {isa = PBXBuildFile; fileRef = D72C94171DBE0DE600D6962A /* Coelho.plist */; };
+		D7A7021E1DF82868009ECD01 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7021B1DF82868009ECD01 /* ViewModel.swift */; };
+		D7A7021F1DF82868009ECD01 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7021C1DF82868009ECD01 /* Int+Extensions.swift */; };
+		D7A702201DF82868009ECD01 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7021D1DF82868009ECD01 /* Quotes.swift */; };
+		D7A702231DF828C0009ECD01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A702221DF828C0009ECD01 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D72C94021DBE0AF700D6962A /* Coelho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coelho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C94051DBE0AF700D6962A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72C94071DBE0AF700D6962A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D72C940A1DBE0AF700D6962A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D72C940C1DBE0AF700D6962A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D72C940F1DBE0AF700D6962A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D72C94111DBE0AF700D6962A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D72C94171DBE0DE600D6962A /* Coelho.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Coelho.plist; sourceTree = "<group>"; };
+		D7A7021B1DF82868009ECD01 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D7A7021C1DF82868009ECD01 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		D7A7021D1DF82868009ECD01 /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		D7A702211DF828C0009ECD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				D72C94051DBE0AF700D6962A /* AppDelegate.swift */,
 				D72C94071DBE0AF700D6962A /* ViewController.swift */,
-				D72C94091DBE0AF700D6962A /* Main.storyboard */,
+				D7A7021B1DF82868009ECD01 /* ViewModel.swift */,
+				D7A7021C1DF82868009ECD01 /* Int+Extensions.swift */,
+				D7A7021D1DF82868009ECD01 /* Quotes.swift */,
+				D7A702221DF828C0009ECD01 /* Main.storyboard */,
 				D72C940C1DBE0AF700D6962A /* Assets.xcassets */,
 				D72C940E1DBE0AF700D6962A /* LaunchScreen.storyboard */,
 				D72C94111DBE0AF700D6962A /* Info.plist */,
@@ -128,7 +137,7 @@
 				D72C94181DBE0DE600D6962A /* Coelho.plist in Resources */,
 				D72C94101DBE0AF700D6962A /* LaunchScreen.storyboard in Resources */,
 				D72C940D1DBE0AF700D6962A /* Assets.xcassets in Resources */,
-				D72C940B1DBE0AF700D6962A /* Main.storyboard in Resources */,
+				D7A702231DF828C0009ECD01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72C94081DBE0AF700D6962A /* ViewController.swift in Sources */,
+				D7A7021F1DF82868009ECD01 /* Int+Extensions.swift in Sources */,
+				D7A702201DF82868009ECD01 /* Quotes.swift in Sources */,
+				D7A7021E1DF82868009ECD01 /* ViewModel.swift in Sources */,
 				D72C94061DBE0AF700D6962A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,20 +159,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D72C94091DBE0AF700D6962A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D72C940A1DBE0AF700D6962A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D72C940E1DBE0AF700D6962A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D72C940F1DBE0AF700D6962A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7A702221DF828C0009ECD01 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7A702211DF828C0009ECD01 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../../../../../../Downloads/MIMUW1/Coelho/Coelho;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -292,6 +305,7 @@
 				D72C94161DBE0AF700D6962A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
