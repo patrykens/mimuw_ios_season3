@@ -16,15 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
-		
+
 		let mainVC: UITabBarController = UITabBarController()
 		mainVC.view.bounds = UIScreen.mainScreen().bounds
-		
-		// Create MessageModel
-		// Create two ThreadViewControllers with shared MessageModel
-		// Set sender indexes
-		// Add them to mainVC
-		
+
+		let threadModel: MessageModel = MessageModel()
+		let thread1VC: ThreadViewController = ThreadViewController(model: threadModel)
+		let thread2VC: ThreadViewController = ThreadViewController(model: threadModel)
+		thread1VC.senderIndex = 0
+		thread2VC.senderIndex = 1
+
+		mainVC.viewControllers = [thread1VC, thread2VC]
+
 		window?.rootViewController = mainVC
 		window?.makeKeyAndVisible()
 		return true
@@ -51,7 +54,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
-
 }
-
