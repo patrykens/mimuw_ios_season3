@@ -23,7 +23,7 @@ class FirstViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		let height = CGFloat(70)
+		let height = CGFloat(65)
 
 		let button1 = newButton()
 		button1.frame.origin.y = height
@@ -51,7 +51,11 @@ class FirstViewController: UIViewController {
 
 		let button7 = newButton()
 		button7.frame.origin.y = height * 7
-		button7.addTarget(self, action: #selector(changeColor(_:)), forControlEvents: .TouchUpInside)
+		button7.addTarget(self, action: #selector(scaleStick(_:)), forControlEvents: .TouchUpInside)
+
+		let button8 = newButton()
+		button8.frame.origin.y = height * 8
+		button8.addTarget(self, action: #selector(changeColor(_:)), forControlEvents: .TouchUpInside)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -125,6 +129,29 @@ class FirstViewController: UIViewController {
 
 		button.layer.addAnimation(scale, forKey: nil)
 		button.layer.contentsScale = 2.5
+	}
+
+	func scaleStick(button: UIButton) {
+		CATransaction.begin()
+		CATransaction.setCompletionBlock {
+			button.layer.transform = CATransform3DMakeScale(2.5, 1, 1)
+		}
+
+		CATransaction.setAnimationDuration(0.5)
+		CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAAnimationLinear))
+
+		let scaleAnimation = CASpringAnimation(keyPath: "transform.scale.x")
+		scaleAnimation.toValue = 2.5
+		scaleAnimation.fillMode = kCAFillModeForwards
+		scaleAnimation.removedOnCompletion = false
+		scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAAnimationLinear)
+		scaleAnimation.duration = 5.5
+		scaleAnimation.damping = 50
+		scaleAnimation.stiffness = 1000
+		scaleAnimation.mass = 10
+
+		button.layer.addAnimation(scaleAnimation, forKey: nil)
+		CATransaction.commit()
 	}
 
 	func changeColor(button: UIButton) {
