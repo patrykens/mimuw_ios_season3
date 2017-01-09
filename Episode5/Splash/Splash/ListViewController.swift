@@ -18,16 +18,30 @@ class ListViewController: UIViewController {
 	private let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
 	private var dataTask: NSURLSessionDataTask?
 
-	private var photoDictionariesArray: NSArray = NSArray()
+	private var hitsArray: NSArray = NSArray()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = UIColor.whiteColor()
+		search.translatesAutoresizingMaskIntoConstraints = false
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(search)
+		view.addSubview(tableView)
 
-		// 'enable' autolayout for views
-		// delegate & datasource
-		// setup tableView
-		// setup constraints
+		search.delegate = self
+		search.backgroundColor = UIColor.lightGrayColor()
+
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.registerClass(CustomTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.estimatedRowHeight = CGFloat(91)
+
+		let con1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|[search]|", options: [], metrics: nil, views: ["search" : search, "table" : tableView])
+		let con2 = NSLayoutConstraint.constraintsWithVisualFormat("H:|[table]|", options: [], metrics: nil, views: ["search" : search, "table" : tableView])
+		let con3 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-60-[search(25)][table]|", options: [], metrics: nil, views: ["search" : search, "table" : tableView])
+
+		view.addConstraints(con1 + con2 + con3)
 	}
 
 	func performSearch() {
@@ -40,9 +54,7 @@ class ListViewController: UIViewController {
 				print(error.localizedDescription)
 			} else if let httpResponse = response as? NSHTTPURLResponse {
 				if httpResponse.statusCode == 200 {
-					if let data = data {
-						self.updateSearchResults(data)
-					}
+					self.updateSearchResults(data!)
 				}
 			}
 		}
@@ -50,7 +62,9 @@ class ListViewController: UIViewController {
 	}
 
 	func updateSearchResults(data: NSData) {
-		// update photoDictionariesArray
+		let dictionary = try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
+		hitsArray =  dictionary["hits"]! as! NSArray
+		tableView.reloadData()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -61,14 +75,14 @@ class ListViewController: UIViewController {
 extension ListViewController: UITextFieldDelegate {
 
 	func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-		// get text from textfield, change spaces to '+'
-		// search url: "https://pixabay.com/api/?key=3986715-6fdb9b164b35997357e2ab3a3&q=[SEARCH_STRING]&image_type=photo"
+		let newText: String = textField.text!.stringByReplacingOccurrencesOfString(" ", withString: "+").lowercaseString
+		urlString = "https://pixabay.com/api/?key=3986715-6fdb9b164b35997357e2ab3a3&q=\(newText)&image_type=photo"
 		return true
 	}
 
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
-		// search
+		performSearch()
 		return true
 	}
 }
@@ -76,20 +90,30 @@ extension ListViewController: UITextFieldDelegate {
 extension ListViewController: UITableViewDataSource {
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 0
+		return hitsArray.count
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! CustomTableViewCell
+		let photoUrl = NSURL(string: (hitsArray[indexPath.row] as! NSDictionary)["previewURL"] as! String)!
 
-		// for every cell create data task for photo NSURL (dictionary key "previewURL")
-		// refresh image on main thread - NSOperationQueue.mainQueue().addOperationWithBlock() ...
+		let task = defaultSession.dataTaskWithURL(photoUrl) { (data, response, error) in
+			let image = UIImage(data: data!)
+
+			NSOperationQueue.mainQueue().addOperationWithBlock() {
+				if let updatingCell: CustomTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as? CustomTableViewCell {
+					updatingCell.photo.image = image
+				}
+			}
+		}
+		task.resume()
 		return cell
 	}
 }
 
 extension ListViewController: UITableViewDelegate {
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		// create new PhotoVC and push on navigation stack
+		let photoController: PhotoViewController = PhotoViewController(photoDictionary: hitsArray[indexPath.row] as! NSDictionary)
+		navigationController?.pushViewController(photoController, animated: true)
 	}
 }

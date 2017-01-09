@@ -14,16 +14,16 @@ class CustomTableViewCell: UITableViewCell {
 
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		
+		photo.translatesAutoresizingMaskIntoConstraints = false
 		photo.contentMode = UIViewContentMode.ScaleAspectFill
 		photo.layer.cornerRadius = CGFloat(10)
 		photo.layer.masksToBounds = true
 		contentView.addSubview(photo)
 
-		// 'enable' autolayout for photo
-		// Add constraints
+		contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-4-[image(100)]", options: [], metrics: nil, views: ["image" : photo]))
+		contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-4-[image(75)]-4-|", options: [], metrics: nil, views: ["image" : photo]))
 	}
-	
+
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
